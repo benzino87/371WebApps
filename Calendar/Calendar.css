@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+#cal table, tr, td, th{
+    border: 1px solid black;
+    text-align: center;
+}
+table{
+    margin: 0 auto;
+    width: 100px; 
+}
+div{
+    float: left;
+    width: 33%;
+}
+button{
+    position: relative;
+    left: 50%;
+}
+.lastMonth a{
+    text-align: right;
+    display: block;
+}
+.nextMonth a{
+    text-align: left;
+    display: block;
+}
+#lastM{
+    text-align: right;
+}
+#nextM{
+    text-align: left;
+}

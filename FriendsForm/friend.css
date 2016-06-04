@@ -1,0 +1,15 @@
+.friend{
+    width: 100%;
+}
+.friend h2, h4{
+    text-align: center;
+}
+.friend form{
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+    margin-left: 35%;
+}
+.friend li{
+    list-style: none;
+}
