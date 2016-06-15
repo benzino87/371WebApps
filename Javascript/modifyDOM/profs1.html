@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head lang="en">
+    <meta charset="UTF-8">
+    </head>
+    <style type="text/css">
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+<body>
+
+<div id="profs">
+<h1>GVSU CIS Professors</h1>
+  <table id="tableOne">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Rank</th>
+        <th>School</th>
+    </tr>
+    <tr><td>Zachary</td><td>Kurmas</td><td>Associate</td><td>Georgia Tech</td></tr>
+    <tr><td>Scott</td><td>Grissom</td><td>Full</td><td>Ohio State</td></tr>
+    <tr><td>Hansye</td><td>Dulimarta</td><td>Associate</td><td>Michigan State</td></tr>
+    <tr><td>Christian</td><td>Trefftz</td><td>Associate</td><td>Michigan State</td></tr>
+    <tr><td>Jonathan</td><td>Engelsma</td><td>Associate</td><td>Michigan State</td></tr>
+    <tr><td>Roger</td><td>Ferguson</td><td>Full</td><td>Wayne State</td></tr>
+    <tr><td>Andrew</td><td>Kalafut</td><td>Assistant</td><td>Indiana</td></tr>
+    <tr><td>Dopey</td><td>Dwarf</td><td>Emeritus</td><td>University (sic) of Georgia</td></tr>
+    <tr><td>Jie</td><td>Du</td><td>Assistant</td><td>University of Maryland, Baltimore County</td></tr>
+    <tr><td>Gregory</td><td>Schymik</td><td>Assistant</td><td>Arizona State</td></tr>
+    <tr><td>Hugh</td><td>McGuire</td><td>Associate</td><td>Stanford</td></tr>
+  </table>
+</div>
+
+<div id="capitals">
+<h1>State Capitals</h1>
+
+<table id="tableTwo">
+ <tr><th>State</th><th>Capital</th></tr>
+<tr><td>Michigan</td><td>Lansing</td></tr>
+<tr><td>Ohio</td><td>Columbus</td></tr>
+<tr><td>Indiana</td><td>Indianapolis</td></tr>
+<tr><td>Georgia</td><td>Atlanta</td></tr>
+<tr><td>Utah</td><td>Salt Lake City</td></tr>
+<tr><td>California</td><td>Sacramento</td></tr>
+</table>
+</div>
+
+</body>
+<script type="text/javascript">
+
+function sort(table, col){
+    var rows = table.getElementsByTagName("tr");
+    console.log(rows.length);
+    var tempRow = [];
+    for(var i = 1; i < rows.length; i++){
+       var currentRow = rows[1].parentNode.removeChild(rows[1]);
+       tempRow.push(currentRow);
+    }
+    var attribute = [];
+    for(var i = 0; i < tempRow.length; i++){
+        attribute.push();
+    }
+    console.log(tempRow.length);
+}
+    // attribute.sort();
+    
+    // for(var j = 1; j < rows.length; j++){
+    //     attribute[i].parentNode.insertBefore(attribute[i], attributes);
+    // }
+    
+    
+    // var attribute = [];
+    // for(var j = 0; 0 < tempRow.length; j++){
+    //     var temp = tempRow[j].getElementsByTagName("td");
+    //     for(var k = 0; k < temp.length; k++){
+    //         attribute.push(temp[k].parentNode.removeChild(temp[k]));
+    //     }
+    // }
+    // attribute.sort(function(a, b){
+    //     return a - b;
+    // });
+    // for(var j = 0; j < )
+    // for(var i = 0; i < tempRow.length; i++){
+    //     rows[i].parentNode.appendChild(tempRow[i]);
+    // }
+
+    
+    // attributes.sort(function(a, b){
+    // });
+    // }
+    
+    /**
+     * Add even listeners to headers of both tables
+     **/
+    var tableOne = document.getElementById("tableOne");
+    var headersTableOne = tableOne.getElementsByTagName("th");
+    for(var i = 0; i < headersTableOne.length; i++){
+        headersTableOne[i].addEventListener("click", function(){sort(tableOne, i)});
+    }
+    var tableTwo = document.getElementById("tableTwo");
+    var headersTableTwo = tableTwo.getElementsByTagName("th");
+    for(var i = 0; i < headersTableTwo.length; i++){
+        headersTableTwo[i].addEventListener("click", function(){sort(tableTwo, i)});
+    }
+</script>
+</html>
+

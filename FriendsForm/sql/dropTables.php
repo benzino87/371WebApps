@@ -12,16 +12,18 @@ if(!$conn){
     echo "Connection sucessfull<br>";
 }
 
-$create = "CREATE TABLE FRIENDS(
-              id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-              firstname VARCHAR(20),
-              lastname VARCHAR(20),
-              phonenumber VARCHAR(10),
-              age INT(100)
-              )";
+$dropfriend = "DROP TABLE FRIENDS";
+$dropaccount = "DROP TABLE ACCOUNT";
 
-if(mysqli_query($conn, $create)){
-    echo "TABLE: FRIENDS CREATED SUCCESSFULLY<br>";
+
+if(mysqli_query($conn, $dropfriend)){
+    echo "FRIENDS DROPPED<br>";
+}else{
+    echo "ERROR: ".mysqli_error($conn); "<br>";
+}
+
+if(mysqli_query($conn, $dropaccount)){
+    echo "ACCOUNTS DROPPED<br>";
 }else{
     echo "ERROR: ".mysqli_error($conn); "<br>";
 }

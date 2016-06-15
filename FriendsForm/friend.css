@@ -5,11 +5,38 @@
     text-align: center;
 }
 .friend form{
-    border: 1px solid black;
     display: inline-block;
     text-align: center;
-    margin-left: 35%;
+    margin-left: 41%;
 }
 .friend li{
     list-style: none;
+}
+.display{
+    width: 100%;
+}
+.display h1{
+    text-align: center;
+}
+.display table{
+    display: inline-block;
+    margin-left: 42%;
+    border: 2px solid black;
+}
+.display #headers th{
+    border: 2px solid black;
+    text-align: center;
+}
+.display td{
+    border: 1px solid black;
+    text-align: center;
+}
+.login{
+    text-align: center;
+}
+.login li{
+    list-style: none;
+}
+.logout h4, h2{
+    text-align: center;
 }
